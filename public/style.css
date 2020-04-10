@@ -1,21 +1,126 @@
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: 'loveloblack';
+  src: url('lovelo_black-webfont.eot');
+  src: url('lovelo_black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('lovelo_black-webfont.woff2') format('woff2'),
+    url('lovelo_black-webfont.woff') format('woff'),
+    url('lovelo_black-webfont.ttf') format('truetype'),
+    url('lovelo_black-webfont.svg#loveloblack') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
+/* NAVBAR */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  background: white;
+  font-family: lovelo;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  &:active {
+    transform: translateX(0%);
+  }
+}
+
+.logo {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
   text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  color: black;
 }
 
-label {
-  display: block;
+.burger {
+  display: none;
+  cursor: pointer;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
+.burger div {
+  width: 25px;
+  height: 5px;
+  background: black;
+  margin: 5px;
 }
 
-form div {
-  margin: 1em;
-  display: inline-block;
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .one {
+  transform: rotate(-45deg) translate(-5px, 9px);
+}
+.toggle .two {
+  opacity: 0;
+}
+
+.toggle .three {
+  transform: rotate(45deg) translate(-5px, -9px);
+}
+
+html,
+body {
+  height: 100%;
 }
