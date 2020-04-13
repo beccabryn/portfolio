@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import styled from 'styled-components'
-import navslide from './navslide'
 
 export default function Navbar() {
   const links = [
@@ -46,7 +43,6 @@ export default function Navbar() {
           <div className="three" />
         </div>
       </nav>
-      <script src="navslide.js" />
     </div>
   )
 }

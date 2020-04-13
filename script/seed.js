@@ -1,24 +1,63 @@
 'use strict'
 
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {Projects} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+  const projects = await Promise.all([
+    Projects.create({
+      id: 1,
+      title:
+        'https://www.picturepaste.ca/images/2020/04/11/1790159559a2ef45a.png',
+      role: 'Fullstack Developer',
+      description:
+        'During the Grace Hopper Program, we were assigned groups and were tasked to create an ecommerce site. We chose to sell prints. I designed the schema and front-end, wrote api routes and different React components.',
+      stack:
+        'This website was developed with Node.js, Postgres, Express, React, and Redux, and deployed on Heroku',
+      gallery: [
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.28.56-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.29.15-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.33-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.48-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.56-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.31.27-PM.png'
+      ]
+    }),
+    Projects.create({
+      id: 2,
+      title:
+        'https://www.picturepaste.ca/images/2020/04/11/24e2f43f1221441ba.png',
+      role: 'Sole Fullstack Developer',
+      description:
+        'With only a weekend to build a fully functional application, I chose to create Slotherapy: a notifications app that reminds 9-5 desk workers to take regular breaks.',
+      stack:
+        'This website was developed with Node.js, Postgres, Express, React, Redux, and NotificationsAPI'
+    }),
+    Projects.create({
+      id: 3,
+      title:
+        'https://www.picturepaste.ca/images/2020/04/11/378b08beee2e621c1.png',
+      role: 'Fullstack Developer',
+      description:
+        '[Hop Hop] Array is a web application for practicing coding algorithms. Users attempt to submit code to be run against test specs, as well as gain points and experience levels for correct solutions.',
+      stack:
+        'The application implements the NERDS (Node, Express, React, Database using SQL) stack. Each technology was specifically selected to complement and enhance the web application.',
+      gallery: [
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.20.44-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.20.57-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.21.04-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.23.27-PM.png'
+      ]
+    })
   ])
 
-  console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${projects.length} projects`)
   console.log(`seeded successfully`)
 }
 
-// We've separated the `seed` function from the `runSeed` function.
-// This way we can isolate the error handling and exit trapping.
-// The `seed` function is concerned only with modifying the database.
 async function runSeed() {
   console.log('seeding...')
   try {
@@ -33,12 +72,8 @@ async function runSeed() {
   }
 }
 
-// Execute the `seed` function, IF we ran this module directly (`node seed`).
-// `Async` functions always return a promise, so we can use `catch` to handle
-// any errors that might occur inside of `seed`.
 if (module === require.main) {
   runSeed()
 }
 
-// we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed

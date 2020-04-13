@@ -77,12 +77,12 @@ nav {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
-    background: transparent;
+    top: 10vh;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -91,6 +91,13 @@ nav {
   }
   .burger {
     display: block;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .art {
+    margin: 10px;
+    min-width: 90%;
   }
 }
 
@@ -123,4 +130,23 @@ nav {
 html,
 body {
   height: 100%;
+}
+
+/* HOME */
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.art {
+  max-width: 28%;
+  border: solid;
+  border-width: thin;
+}
+
+.art:hover {
+  filter: invert(1);
+  cursor: pointer;
 }
