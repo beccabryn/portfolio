@@ -10,8 +10,7 @@ async function seed() {
   const projects = await Promise.all([
     Projects.create({
       id: 1,
-      title:
-        'https://www.picturepaste.ca/images/2020/04/11/1790159559a2ef45a.png',
+      title: 'Name-Pending',
       role: 'Fullstack Developer',
       description:
         'During the Grace Hopper Program, we were assigned groups and were tasked to create an ecommerce site. We chose to sell prints. I designed the schema and front-end, wrote api routes and different React components.',
@@ -28,18 +27,24 @@ async function seed() {
     }),
     Projects.create({
       id: 2,
-      title:
-        'https://www.picturepaste.ca/images/2020/04/11/24e2f43f1221441ba.png',
+      title: 'Slotherapy',
       role: 'Sole Fullstack Developer',
       description:
         'With only a weekend to build a fully functional application, I chose to create Slotherapy: a notifications app that reminds 9-5 desk workers to take regular breaks.',
       stack:
-        'This website was developed with Node.js, Postgres, Express, React, Redux, and NotificationsAPI'
+        'This website was developed with Node.js, Postgres, Express, React, Redux, and NotificationsAPI',
+      gallery: [
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.28.56-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.29.15-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.33-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.48-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.56-PM.png',
+        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.31.27-PM.png'
+      ]
     }),
     Projects.create({
       id: 3,
-      title:
-        'https://www.picturepaste.ca/images/2020/04/11/378b08beee2e621c1.png',
+      title: '[Hop Hop] Array',
       role: 'Fullstack Developer',
       description:
         '[Hop Hop] Array is a web application for practicing coding algorithms. Users attempt to submit code to be run against test specs, as well as gain points and experience levels for correct solutions.',

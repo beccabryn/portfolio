@@ -99,6 +99,9 @@ nav {
     margin: 10px;
     min-width: 90%;
   }
+  .project-art {
+    max-width: 100%;
+  }
 }
 
 .nav-active {
@@ -130,6 +133,7 @@ nav {
 html,
 body {
   height: 100%;
+  font-family: lovelo;
 }
 
 /* HOME */
@@ -149,4 +153,49 @@ body {
 .art:hover {
   filter: invert(1);
   cursor: pointer;
+}
+
+/* SINGLE PROJECT */
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-art {
+  width: 40%;
+}
+
+.art-wrapper {
+  display: flex;
+  justify-content: center;
+  background: black;
+  width: 100%;
+}
+
+.project-header {
+  letter-spacing: 0.5rem;
+  text-align: center;
+  font-size: 27px;
+  margin-block-end: 0.2em;
+}
+
+.project-title {
+  color: white;
+  letter-spacing: 1.2rem;
+  text-align: center;
+}
+
+.project-text {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.details-wrapper {
+  max-width: 70%;
 }

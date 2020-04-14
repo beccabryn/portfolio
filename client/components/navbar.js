@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
 
 export default function Navbar() {
   const links = [
@@ -18,7 +16,7 @@ export default function Navbar() {
         </div>
         <ul className={navIsOpen ? 'nav-active nav-links' : 'nav-links'}>
           {links.map((link, index) => (
-            <li
+            <li key={index}
               style={
                 navIsOpen
                   ? {

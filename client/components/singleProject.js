@@ -1,30 +1,53 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import styled from 'styled-components'
+import {getSingleProject} from '../store/project'
 /**
  * COMPONENT
  */
-export default function Projects() {
-  return (
-    <div className="wrapper">
-      <img
-        src="https://www.picturepaste.ca/images/2020/04/11/5.png"
-        alt="5.png"
-        className="art"
-      />
+class SingleProject extends React.Component {
+  constructor(props) {
+    super(props),
+      (this.state = {
+        project: {}
+      })
+  }
+  componentDidMount(id) {
+    this.props.getSingleProject(this.props.match.params.id)
+  }
 
-      <img
-        src="https://www.picturepaste.ca/images/2020/04/11/Projects-3.png"
-        alt="Projects-3.png"
-        className="art"
-      />
+  render() {
+    const project = this.props.project
+    console.log('GOT HERE', this.props)
 
-      <img
-        src="https://www.picturepaste.ca/images/2020/04/11/6.png"
-        alt="6.png"
-        className="art"
-      />
-    </div>
-  )
+    return (
+      <div className="project-wrapper">
+        <div className="art-wrapper">
+          <h1 className="project-title">{project.title}</h1>
+        </div>
+        <div className="details-wrapper">
+          <h3 className="project-header">Role:</h3>
+          <h4 className="project-text">{project.role}</h4>
+          <br />
+          <h3 className="project-header">Description:</h3>
+          <h4 className="project-text">{project.description}</h4>
+          <br />
+          <h3 className="project-header">Stack:</h3>
+          <h4 className="project-text">{project.stack}</h4>
+        </div>
+      </div>
+    )
+  }
 }
+
+const mapState = state => {
+  console.log(state)
+  return {
+    project: state.projects.project
+  }
+}
+
+const mapDispatch = dispatch => ({
+  getSingleProject: id => dispatch(getSingleProject(id))
+})
+
+export default connect(mapState, mapDispatch)(SingleProject)
