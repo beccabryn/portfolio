@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Navbar() {
   const links = [
-    <a href="#">Github</a>,
-    <a href="#">LinkedIn</a>,
-    <a href="#">Contact</a>
+    <a className='links' href='https://github.com/beccabryn' target="_blank">Github</a>,
+    <a className='links' href="https://www.linkedin.com/in/rebecca-duhamel-8052a4b3/" target="_blank">LinkedIn</a>,
+    <a className='links' href='mailto:rduhamel9@gmail.com' target="_blank">Contact</a>
   ]
   const [navIsOpen, setNavIsOpen] = React.useState(false)
 
@@ -12,7 +12,7 @@ export default function Navbar() {
     <div>
       <nav>
         <div className="logo">
-          <h4>Rebecca Bryn</h4>
+          <a href='/'>Rebecca Bryn</a>
         </div>
         <ul className={navIsOpen ? 'nav-active nav-links' : 'nav-links'}>
           {links.map((link, index) => (

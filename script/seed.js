@@ -17,13 +17,14 @@ async function seed() {
       stack:
         'This website was developed with Node.js, Postgres, Express, React, and Redux, and deployed on Heroku',
       gallery: [
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.28.56-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.29.15-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.33-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.48-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.56-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.31.27-PM.png'
-      ]
+        'https://live.staticflickr.com/65535/49776690363_558f2a8e14_b.jpg',
+        'https://live.staticflickr.com/65535/49777223971_20987d6637_b.jpg',
+        'https://live.staticflickr.com/65535/49776690338_7da643d7ee_b.jpg',
+        'https://live.staticflickr.com/65535/49776690318_772cae8a2f_b.jpg',
+        'https://live.staticflickr.com/65535/49777223936_e9d9e1dda7_b.jpg',
+        'https://live.staticflickr.com/65535/49777223916_d20dc407ce_b.jpg'
+      ],
+      url: 'https://name-pending.herokuapp.com/'
     }),
     Projects.create({
       id: 2,
@@ -34,13 +35,13 @@ async function seed() {
       stack:
         'This website was developed with Node.js, Postgres, Express, React, Redux, and NotificationsAPI',
       gallery: [
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.28.56-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.29.15-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.33-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.48-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.30.56-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-8.31.27-PM.png'
-      ]
+        'https://live.staticflickr.com/65535/49789172723_ac12d68d95_b.jpg',
+        'https://live.staticflickr.com/65535/49789172933_797ca5df15_b.jpg',
+        'https://live.staticflickr.com/65535/49789717086_b16703a7ac_b.jpg',
+        'https://live.staticflickr.com/65535/49790032552_a5a1cffd6e_b.jpg',
+        'https://live.staticflickr.com/65535/49789173388_e92936b2ca_b.jpg'
+      ],
+      url: 'https://github.com/beccabryn/slotherapy'
     }),
     Projects.create({
       id: 3,
@@ -51,11 +52,12 @@ async function seed() {
       stack:
         'The application implements the NERDS (Node, Express, React, Database using SQL) stack. Each technology was specifically selected to complement and enhance the web application.',
       gallery: [
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.20.44-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.20.57-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.21.04-PM.png',
-        'https://www.picturepaste.ca/images/2020/04/11/Screen-Shot-2020-04-11-at-9.23.27-PM.png'
-      ]
+        'https://live.staticflickr.com/65535/49777576082_714c266faa_b.jpg',
+        'https://live.staticflickr.com/65535/49777251106_54c2214874_b.jpg',
+        'https://live.staticflickr.com/65535/49776717093_bd630d17b8_b.jpg',
+        'https://live.staticflickr.com/65535/49777251096_9872624893_b.jpg'
+      ],
+      url: 'http://hophoparray.com/'
     })
   ])
 

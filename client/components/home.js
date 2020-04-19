@@ -1,16 +1,11 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
-// import {connect} from 'react-redux'
-// import styled from 'styled-components'
-/**
- * COMPONENT
- */
+
 export default function Home() {
   let projectImg =
-    'https://www.picturepaste.ca/images/2020/04/10/Projects-1.png'
+    'https://live.staticflickr.com/65535/49777242911_2199361ce1_b.jpg'
   let resumeImg =
-    'https://www.picturepaste.ca/images/2020/04/10/23211435af1afff78.png'
-  let aboutImg = 'https://www.picturepaste.ca/images/2020/04/10/Projects-2.png'
+    'https://live.staticflickr.com/65535/49777243476_4b2f1527e4_b.jpg'
+  let aboutImg = 'https://live.staticflickr.com/65535/49777242886_3fd5830022_b.jpg'
   return (
     <div className="wrapper">
       <img

@@ -23,6 +23,9 @@ const Projects = db.define('project', {
   },
   gallery: {
     type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  url: {
+    type: Sequelize.STRING
   }
 })
 
