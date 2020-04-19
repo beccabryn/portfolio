@@ -7,7 +7,8 @@ export default function Home() {
     'https://live.staticflickr.com/65535/49777243476_4b2f1527e4_b.jpg'
   let aboutImg = 'https://live.staticflickr.com/65535/49777242886_3fd5830022_b.jpg'
   return (
-    <div className="wrapper">
+    <div className="outerwrapper">
+      <div className="wrapper">
       <img
         src={projectImg}
         alt="Projects-1.png"
@@ -30,5 +31,7 @@ export default function Home() {
         className="art"
       />
     </div>
+    </div>
+
   )
 }

@@ -1,14 +1,4 @@
-@font-face {
-  font-family: 'loveloblack';
-  src: url('lovelo_black-webfont.eot');
-  src: url('lovelo_black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('lovelo_black-webfont.woff2') format('woff2'),
-    url('lovelo_black-webfont.woff') format('woff'),
-    url('lovelo_black-webfont.ttf') format('truetype'),
-    url('lovelo_black-webfont.svg#loveloblack') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
 
 /* NAVBAR */
 
@@ -18,7 +8,7 @@ nav {
   justify-content: space-around;
   min-height: 17vh;
   background: white;
-  font-family: lovelo;
+  font-family: 'Montserrat', sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -31,6 +21,7 @@ nav {
   color: black;
   text-transform: uppercase;
   letter-spacing: 5px;
+  font-weight: 900;
   font-size: 2rem;
 }
 
@@ -41,6 +32,7 @@ nav {
 
 .links {
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -142,10 +134,15 @@ nav {
 html,
 body {
   height: 100%;
-  font-family: lovelo;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* HOME */
+
+.outerwrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .wrapper {
   display: flex;
@@ -192,6 +189,7 @@ body {
   font-size: 40px;
   margin-block-start: .4em;
   margin-block-end: .3em;
+  text-transform: uppercase;
 }
 
 .text {
@@ -204,7 +202,7 @@ body {
 }
 
 .details-wrapper {
-  max-width: 70%;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,10 +230,10 @@ body {
 
 .popout {
   font-weight: 900;
+  letter-spacing: .1em;
   margin-block-end: 0;
-  padding: 10px;
   margin-block-start: .4em;
-  font-size: 28px;
+  font-size: 33px;
   text-align: center;
 }
 @keyframes ani {
@@ -292,7 +290,7 @@ body {
 
 
 .skillheader {
-  font-family: lovelo;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   margin-block-end: 0;
 }
